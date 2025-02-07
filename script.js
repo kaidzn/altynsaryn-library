@@ -11,3 +11,8 @@ function closePopup() {
     var popup = document.getElementById('popup');
     popup.style.display = 'none'; // Hide the popup
 }
+
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
