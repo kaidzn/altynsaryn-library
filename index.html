@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altynsaryn Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#hero">
+                    <img src="img/library-logo.jpg" alt="Main Logo">
+                </a>
+                <h1>Altynsaryn Kids Labrary</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Басты Бет</a></li>
+                    <li><a href="#about">Біз жайлы</a></li>
+                    <li><a href="#gallery">Галлерея</a></li>
+                    <li><a href="#news">Соңғы жаңалықтар</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to Farabi Library</h2>
+            <p>Explore, Learn, Grow with us</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Біз туралы</h2>
+            <p>Фараби кітапханасы – бұл кітап оқу мен шытырман оқиға тоғысатын балаларға арналған ерекше орын! Қабырғалары түрлі-түсті кітаптарға, қызықты оқиғаларға және көңілді әрекеттерге толы бұл жас оқырмандар сиқырлы әлемдерге сүңгіп, жаңа нәрселерді біліп, қиялдарын зерттей алатын орын. Сіз ертегілерді, жануарларды немесе ғылымды жақсы көресіз бе, мұнда барлығына бір нәрсе бар!</p>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Галлерея</h2>
+            <div class="gallery-grid">
+                <img src="img/gallery1 (1).jpg" alt="Library Image 1">
+                <img src="img/gallery1 (2).jpg" alt="Library Image 1">
+                <img src="img/gallery1 (3).jpg" alt="Library Image 1">
+                <img src="img/gallery1 (4).jpg" alt="Library Image 1">
+                <img src="img/gallery1 (5).jpg" alt="Library Image 1">
+                <img src="img/gallery1 (6).jpg" alt="Library Image 1">
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <!-- Latest News Section -->
+    <section id="news">
+        <div class="container">
+            <h2>Соңғы жаңалықтар</h2>
+            <div class="news-items">
+                <div class="news-item">
+                    <img src="img/news1 (1).jpg" alt="News 1" class="news-img" onclick="openPopup('img/news1 (1).jpg')">
+                </div>
+                <div class="news-item">
+                    <img src="img/news1 (2).jpg" alt="News 1" class="news-img" onclick="openPopup('img/news1 (2).jpg')">
+                </div>
+                <div class="news-item">
+                    <img src="img/news1 (3).jpg" alt="News 1" class="news-img" onclick="openPopup('img/news1 (3).jpg')">
+                </div>
+                <div class="news-item">
+                    <img src="img/news1 (4).jpg" alt="News 1" class="news-img" onclick="openPopup('img/news1 (4).jpg')">
+                </div>
+                <div class="news-item">
+                    <img src="img/news1 (5).jpg" alt="News 1" class="news-img" onclick="openPopup('img/news1 (5).jpg')">
+                </div>
+                <div class="news-item">
+                    <img src="img/news1 (6).jpg" alt="News 1" class="news-img" onclick="openPopup('img/news1 (6).jpg')">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Section -->
+    <div id="popup" class="popup" onclick="closePopup()">
+        <span class="close-btn" onclick="closePopup()">X</span>
+        <img id="popup-img" src="" alt="Popup Image">
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Altynsaryn Labrary. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
