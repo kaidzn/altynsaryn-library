@@ -22,15 +22,19 @@ header {
     color: #282828;
     padding: 20px 0;
 }
-header .container{
+
+header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
-header .logo{
+
+header .logo {
     display: flex;
     align-items: center;
 }
+
 header .logo h1 {
     font-size: 2em;
     margin: 0;
@@ -38,7 +42,8 @@ header .logo h1 {
 
 nav ul {
     list-style: none;
-    text-align: center;
+    display: flex;
+    align-items: center;
     margin-top: 10px;
 }
 
@@ -51,6 +56,14 @@ nav ul li a {
     color: #282828;
     text-decoration: none;
     font-size: 1.2em;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #282828;
 }
 
 /* Hero Section */
@@ -72,18 +85,85 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
-.cta-button {
-    background-color: #4CAF50;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Hide the regular menu and show the hamburger menu */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+        padding: 10px;
+        display: block;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on smaller screens */
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    /* Hero Section */
+    #hero {
+        padding: 80px 0;
+        height: 80vh;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
 }
 
-.cta-button:hover {
-    background-color: #45a049;
+/* For smaller screens */
+@media (max-width: 480px) {
+    /* Hero Section */
+    #hero {
+        padding: 60px 0;
+        height: 70vh;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1.1em;
+    }
+
+    /* Gallery Section */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* News Section */
+    .news-items {
+        flex-direction: column;
+    }
+
+    .news-item {
+        width: 80%;
+    }
 }
+
 
 /* About Section */
 #about {
@@ -142,7 +222,7 @@ nav ul li a {
 .news-items {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Added flex-wrap for responsiveness */
+    flex-wrap: wrap;
 }
 
 .news-item {
@@ -151,7 +231,7 @@ nav ul li a {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 20px; /* Added margin for spacing on smaller screens */
+    margin-bottom: 20px;
 }
 
 .news-item img {
@@ -195,46 +275,6 @@ nav ul li a {
     color: #ff0000;
 }
 
-/* Contact Section */
-#contact {
-    background-color: #fff;
-    padding: 50px 0;
-    text-align: center;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#contact form label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-#contact form input,
-#contact form textarea {
-    min-width: 50%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact form button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#contact form button:hover {
-    background-color: #45a049;
-}
-
 /* Footer Section */
 footer {
     background-color: #282828;
@@ -243,12 +283,150 @@ footer {
     text-align: center;
 }
 
+/* Hamburger Menu Styles */
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #282828;
+}
+
+/* Close Button Inside Menu */
+.menu .close-btn {
+    font-size: 2em;
+    cursor: pointer;
+    color: #282828;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Menu Style */
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+/* Hide Close Button on Desktop */
+@media (min-width: 768px) {
+    .menu .close-btn {
+        display: none;
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
-    /* Header Navigation */
+    /* Hide the regular menu and show the hamburger menu */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        padding: 10px 0;
+    }
+
     nav ul li {
-        display: block;
+        text-align: center;
         margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+        padding: 10px;
+        display: block;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on smaller screens */
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    /* Close Button Inside Menu */
+    .menu .close-btn {
+        display: block;
+    }
+
+    /* Hero Section */
+    #hero {
+        padding: 80px 0;
+        height: 80vh;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+}
+@media (min-width: 768px) {
+    .menu .close-btn {
+        display: none;
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Hide regular menu and show hamburger menu on mobile */
+    nav ul {
+        display: none; /* Hide the regular menu */
+        flex-direction: column;
+        position: fixed; /* Fix the menu on screen */
+        top: 0;
+        left: 0;
+        width: 100%; /* Take up the full width of the screen */
+        height: 100%; /* Full height of the screen */
+        background-color: #fff;
+        z-index: 1000; /* Keep the menu on top */
+        padding-top: 100px; /* Add some padding to the top */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        font-size: 2em;
+        padding: 10px;
+        display: block;
+        color: #282828;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on smaller screens */
+        font-size: 2.5em;
+        color: #282828;
+        cursor: pointer;
+    }
+
+    .menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .menu .close-btn {
+        display: block; /* Show the close button inside the menu */
+        font-size: 2em;
+        color: #282828;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
     }
 
     /* Hero Section */
@@ -280,18 +458,21 @@ footer {
         margin-bottom: 20px;
     }
 
-    /* Contact Form */
-    #contact form input,
-    #contact form textarea {
-        min-width: 70%; /* Increase the form input width on mobile */
+    /* Footer */
+    footer {
+        padding: 15px 0;
     }
 }
 
 @media (max-width: 480px) {
     /* Hero Section */
+    /* Hero Section */
     #hero {
         padding: 60px 0;
         height: 70vh;
+    }
+    h1{
+        display: none;
     }
 
     #hero h2 {
@@ -304,17 +485,16 @@ footer {
 
     /* Gallery Section */
     .gallery-grid {
-        grid-template-columns: 1fr; /* Single column for small screens */
+        grid-template-columns: 1fr;
     }
 
     /* News Section */
     .news-items {
-        flex-direction: column; /* Stack the news items vertically */
+        flex-direction: column;
     }
 
     .news-item {
-        width: 80%; /* Take up more width on small screens */
-        margin-bottom: 20px;
+        width: 80%;
     }
 
     /* Footer Section */
